@@ -1,8 +1,10 @@
 class Player
-
-  attr_reader :lives
+  @@ID = 1
+  attr_reader :lives, :name
 
   def initialize 
+    @name = "Player #{@@ID}"
+    @@ID += 1
     @lives = 3
   end
 

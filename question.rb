@@ -17,7 +17,12 @@ class Question
   end
 
   def verify_answer
-    @user_answer.to_i == @correct_answer
+    is_correct = @user_answer.to_i == @correct_answer
+    if is_correct
+      puts "Correct!"
+    else 
+      puts "Wrong!"
+    end
+    is_correct
   end
-
 end
